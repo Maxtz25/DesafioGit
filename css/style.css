@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr) ;
+    grid-template-areas: "header header header"
+                         "main main main"
+                         "footer footer footer";
+
+}
+
+header {
+    background-color: #f3b7b9 ;
+    height: 20vh;
+    grid-area: header;
+
+
+}
+
+header nav {
+    height: 10vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "btn1 miLogo btn2";
+
+
+}
+
+header nav div {
+    margin: 15px;
+}
+
+header nav div img {
+    height:150px;
+    width: 150px;
+    margin-left: 150px;
+
+}
+
+header div img {
+    height:150px;
+    width: 150px;
+    margin-left: 550px;
+    margin-bottom: 55px;
+    
+}
+
+
+
+
+
+/* #miBoton1{
+    grid-area: boton1;
+    margin: auto;
+}*/
+/*
+#miBoton2 {
+    grid-area: boton2;
+    margin-left: 50px;
+}  */
+
+#miLogo {
+    grid-area: miLogo;
+
+}
+
+main {
+
+    background-color: #d2b3d4;
+    height: 150vh;
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-image: radial-gradient(circle, rgba(222,182,166,1) 22%, rgba(210,179,212,1) 82%, rgba(223,223,131,1) 100%);
+}
+
+main section img {
+    height: auto;
+    width: auto;
+}
+
+main section img:hover {
+    transform: scale(1.2);
+    transition: transform 15s;
+
+}
+
+#imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "img img img"
+                          "img img img"
+                          "img img img";
+
+}
+footer {
+    height: 30vh;
+    background-color: #cee2b1;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid black;
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    header div img {
+        height:150px;
+        width: 150px;
+        margin-left: 250px;
+        margin-bottom: 45px;
+    
+    }
+
+ 
+    main section img {
+        height: 300px;
+        width: 550px;
+    }
+
+    #lista {
+        height: 5px;
+        width: 5px;
+
+    }
+     #redes {
+        height: 5px;
+        width: 5px;
+
+     }
+
+     #medioPago {
+        height: 5px;
+        width: 5px;
+
+     }
+
+     #imagenes {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: " img img"
+                              "img img"
+                              "img img"
+                              "img img"
+                              "img";
+
+
+}
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    header div img {
+        height:150px;
+        width: 150px;
+        margin-left: 150px;
+        margin-bottom: 5px;
+    
+    }
+
+    main section img {
+        height: 250px;
+        width: 350px;
+    }
+    #imagenes {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: " img img"
+                              "img img"
+                              "img img"
+                              "img img"
+                              "img";
+                              align-items: stretch;
+
+
+}
+
+
+
+}
